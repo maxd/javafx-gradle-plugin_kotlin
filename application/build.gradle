@@ -1,0 +1,14 @@
+dependencies {
+    compile project(':core')
+}
+
+//apply plugin: 'kotlin' // (1) uncomment here
+
+apply plugin: 'javafx-gradle-plugin'
+
+jfx {
+    mainClass = 'app.App'
+    bundler = "dmg"
+    vendor = 'Protonail'
+    verbose = true
+}
