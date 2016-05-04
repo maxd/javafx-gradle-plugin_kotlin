@@ -1,19 +1,3 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-    }
-}
-
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
-
 apply plugin: 'kotlin'
 
 dependencies{
