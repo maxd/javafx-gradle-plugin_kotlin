@@ -1,10 +1,31 @@
-dependencies {
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "de.dynamicfiles.projects.gradle.plugins:javafx-gradle-plugin:8.4.1"
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'javafx-gradle-plugin'
+apply plugin: 'kotlin'
+
+
+dependencies{
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
     compile project(':core')
 }
 
-//apply plugin: 'kotlin' // (1) uncomment here
-
-apply plugin: 'javafx-gradle-plugin'
 
 jfx {
     mainClass = 'app.App'
